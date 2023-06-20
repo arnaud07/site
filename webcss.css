@@ -1,0 +1,380 @@
+html
+{
+  scroll-behavior: smooth;
+}
+
+body
+{
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  background-image: url("b.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-color: #00000049;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-image: url(fond-1.jpg);
+  color: #000000;
+  width: 100%;
+  line-height: 0.5;
+}
+
+
+footer
+{
+  color: black;
+}
+
+.tab {
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #ccc;
+}
+
+
+/* Styles pour la zone de contenu */
+main {
+  padding: 30px;
+}
+
+/* Styles pour les articles du blog */
+article h2 {
+  margin-top: 0;
+}
+
+article p {
+  line-height: 1.5;
+}
+
+article a {
+  color: #333;
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+.lien {
+  color: #000000;
+}
+
+.ref {
+  color: #ff0000;
+}
+
+main img {
+  max-width: 100%;
+}
+
+.xxs {
+  font-size: xx-small;
+}
+
+.prixx {
+  margin-right: 5%;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.prix {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: large;
+  align-self: center;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.xxl {
+  font-size: x-large;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 40%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.diva {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+}
+
+.diva h3 {
+  flex: 3;
+  align-self: center;
+}
+
+.diva p {
+  padding-right: 10%;
+  padding-left: 10px;
+  flex: 10;
+  align-self: center;
+  max-width: 50%;
+}
+
+.diva img {
+  flex: 4;
+  padding-right: 3%;
+  max-width: 10%;
+  max-height: 10%;
+}
+
+.diva .prix {
+  flex: 2;
+}
+
+#select {
+  padding-top: 1%;
+}
+
+#a,
+#b,
+#c,
+#d,
+#e,
+#f,
+#g,
+#h,
+#i,
+#j {
+  scroll-margin-top: 300px;
+}
+
+.pg2
+{
+  display: flex;
+  padding-top: 3%;
+  text-align: justify;
+}
+
+
+.pg2 article
+{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.fixed
+{
+  position: fixed;
+  z-index: 2;
+}
+
+.navi
+{
+  display: flex;
+}
+
+.pad
+{
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.inv
+{
+  color: transparent;
+}
+
+.select ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.select  li {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.select  li:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.select  ul ul {
+  display: none;
+  position: absolute;
+}
+
+.select  li:hover > ul {
+  display: block;
+}
+
+.select  ul ul li {
+  display: block;
+  padding: 10px 20px;
+}
+
+.flex
+{
+  color: #000000;
+  display: flex;
+  padding-top: 10%;
+}
+
+.bcg
+{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.content
+{
+  padding-left: 2%;
+}
+
+.categorie .contenu-categorie {
+  max-height: 0; /* Cacher le contenu par défaut */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out; /* Animation de transition */
+}
+
+.categorie-checkbox:checked ~ .contenu-categorie {
+  max-height: 10000px; /* Afficher le contenu lorsque la checkbox est cochée */
+}
+
+.nom-categorie {
+  cursor: pointer; /* Ajouter un curseur pointeur pour indiquer la possibilité de cliquer */
+}
+
+.nom-categorie::after {
+  content: ' >'; /* Ajouter une flèche ">" à la fin du nom de la catégorie */
+}
+
+.categorie-checkbox:checked ~ .nom-categorie::after {
+  content: ' v'; /* Changer la flèche ">" en flèche "v" lorsque la checkbox est cochée */
+}
+
+.category-content {
+  display: none;
+}
+
+.category-checkbox:checked + .category-label + .category-content {
+  display: block;
+}
+
+.category-content h1 
+{
+  font-size: 24px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 1%;
+  text-align: left;
+}
+
+.espace
+{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9,#img10
+{
+  height: auto; /* Ajustement automatique de la hauteur pour conserver les proportions */
+  width: 30vw; /* Limite la largeur maximale de l'image à 100% du conteneur */
+  object-fit: contain; /* Ajuste l'image en conservant son rapport longueur-hauteur */
+}
+
+@media (max-width: 1250px) 
+{
+  .diva {
+    flex-direction: column;
+  }
+  .diva, .diva p
+  {
+    padding: 10px;
+    padding-top: 30px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.xxs
+{
+  line-height: 102%;
+}
+
+p
+{
+  font-size: small;
+}
+
+td
+{
+  font-size: small;
+}
+
+th
+{
+  font-size: small;
+}
+
+
+.xxl
+{
+  font-size: medium;
+}
+
+h3
+{
+  font-size: medium;
+}
+
+.prix
+{
+  font-size: medium;
+}
+
+img
+{
+  transform: scale(3);
+  padding-top: 15%;
+  padding-bottom: 15%;
+  padding-left: 6%;
+}
+
+.content
+{
+  padding-top: 100px;
+}
+
+body
+{
+  background-repeat:repeat ;
+}
+}
